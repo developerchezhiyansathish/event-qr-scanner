@@ -1,0 +1,83 @@
+.qr-scanner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.qr-reader-container {
+    width: 100%;
+    max-width: 500px; /* Ensures it doesn't stretch too wide */
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.qr-reader {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures content scales nicely within bounds */
+}
+
+.file-input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #4e54c8;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.file-input:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.result-message {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.qr-reader-container:hover {
+    transform: scale(1.02);
+}
