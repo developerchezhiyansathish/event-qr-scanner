@@ -13,7 +13,7 @@ const QrScanner = () => {
             setScanResult(data);
 
             try {
-                const response = await axios.post('http://localhost:3001/verify', {
+                const response = await axios.post('https://event-qr-scanner.onrender.com/verify', {
                     uniqueId: JSON.parse(data).uniqueId,
                 });
 
